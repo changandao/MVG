@@ -1,0 +1,12 @@
+function [vx, vy] = getFlow(I1, I2, sigma)
+
+[M11, M12, M22, q1, q2] = getMq(I1, I2, sigma);
+
+% TODO calc flow (w/o loop).
+detM = M11.*M22 - M12.*M12;
+
+vx = (M22.*q1 - M12.*q2)./(-detM);
+vy = (M11.*q2 - M12.*q1)./(-detM);
+
+end
+
