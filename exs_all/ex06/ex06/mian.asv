@@ -1,0 +1,8 @@
+clear 
+close all;
+
+img1 = imread('batinria0.tif');
+img2 = imread('batinria1.tif');
+
+imshow(img1)
+[x,y] = ginput(gcf);
